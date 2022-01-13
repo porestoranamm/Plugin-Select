@@ -3,3 +3,21 @@
     display: flex;
     justify-content: center;
 }
+
+.wrap {
+    width: 500px;
+}
+
+$height: 46px;
+
+.select {
+
+    &__input {
+        bottom: 1px solid #ccc;
+        border-radius: 5px;
+        height: $sheight;
+    }
+
+    &__dropdown {}
+
+}
