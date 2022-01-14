@@ -16,6 +16,9 @@ $height: 46px;
         bottom: 1px solid #ccc;
         border-radius: 5px;
         height: $sheight;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
     }
 
     &__dropdown {}
