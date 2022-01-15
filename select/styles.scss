@@ -17,16 +17,27 @@ body {
 $height: 46px;
 
 .select {
+    width: 100%;
+    position: relative;
 
     &__input {
         bottom: 1px solid #ccc;
         border-radius: 5px;
-        height: $sheight;
+        height: $height;
         display: flex;
         align-items: center;
         padding: 0 1rem;
     }
 
-    &__dropdown {}
+    &__dropdown {
+        position: absolute;
+        border-radius: 5px;
+        bottom: 1px solid #ccc;
+        top: $height;
+        left: 0;
+        right: 0;
+        max-height: 200px;
+        overflow-y: auto;
+    }
 
 }
