@@ -58,4 +58,8 @@ $height: 46px;
         list-style: none;
     }
 
+    &__item {
+        padding: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
 }
