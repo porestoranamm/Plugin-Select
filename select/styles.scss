@@ -20,6 +20,16 @@ $height: 46px;
     width: 100%;
     position: relative;
 
+    &.open {
+        .select__dropdown {
+            display: block;
+        }
+
+        .select__input {
+            border-bottom: none;
+        }
+    }
+
     &__input {
         bottom: 1px solid #ccc;
         border-radius: 5px;
@@ -30,6 +40,7 @@ $height: 46px;
     }
 
     &__dropdown {
+        display: none;
         position: absolute;
         border-radius: 5px;
         bottom: 1px solid #ccc;
