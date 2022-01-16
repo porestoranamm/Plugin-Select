@@ -4,11 +4,11 @@ export class Select {
     }
 
     open() {
-
+        this.$el.classList.add('open')
     }
 
     close() {
-        
+        this.$el.classList.remove('open')
     }
 
 }
