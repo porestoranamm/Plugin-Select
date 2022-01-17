@@ -31,10 +31,8 @@ export class Select {
         this.$el.innerHTML = getTemplate()
     }
 
-    #setup () {
-        this.$el.addEventListener('click', () => {
-
-        })
+    #setup() {
+        this.$el.addEventListener('click', this.clickHandler)
     }
 
     open() {
@@ -45,6 +43,8 @@ export class Select {
         this.$el.classList.remove('open')
     }
 
-    
+    destroy() {
+        this.$el.remove('click', this.clickHandler)
+    }
 
 }
