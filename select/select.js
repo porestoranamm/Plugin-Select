@@ -27,8 +27,11 @@ export class Select {
     }
 
     #render() {
+        this.$el.classList.add('select')
         this.$el.innerHTML = getTemplate()
     }
+
+
 
     open() {
         this.$el.classList.add('open')
