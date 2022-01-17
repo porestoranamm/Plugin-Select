@@ -24,6 +24,10 @@ export class Select {
         this.$el = document.querySelector(selector)
     }
 
+    #render() {
+        this.$el.innerHTML = getTemplate()
+    }
+
     open() {
         this.$el.classList.add('open')
     }
