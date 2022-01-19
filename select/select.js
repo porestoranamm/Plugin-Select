@@ -1,6 +1,6 @@
 const getTemplate = () => {
     return `
-    <div class="select__input">
+    <div class="select__input" data-type="input">
                     <span>Text</span>
                     <i class="fa fa-chevron-down"></i>
                 </div>
@@ -38,9 +38,15 @@ export class Select {
     }
 
     clickHandler(event) {
-        console.log(event)
+        const {type} = event.target.dataset 
+
+        if (type === 'input') {
+
+        }
     }
 
+    
+    
     open() {
         this.$el.classList.add('open')
     }
