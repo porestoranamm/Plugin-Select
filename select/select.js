@@ -38,7 +38,7 @@ export class Select {
     }
 
     clickHandler(event) {
-
+        console.log(event)
     }
 
     open() {
