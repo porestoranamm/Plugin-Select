@@ -50,7 +50,7 @@ export class Select {
     }
 
     toggle() {
-
+        this.isOpen ? this.close() : this.open()
     }
 
     open() {
