@@ -24,6 +24,7 @@ export class Select {
         this.$el = document.querySelector(selector)
 
         this.#render()
+        this.#setup()
     }
 
     #render() {
@@ -32,7 +33,12 @@ export class Select {
     }
 
     #setup() {
+        this.clickHandler = this.clickHandler.bind(this)
         this.$el.addEventListener('click', this.clickHandler)
+    }
+
+    clickHandler(event) {
+
     }
 
     open() {
@@ -44,7 +50,7 @@ export class Select {
     }
 
     destroy() {
-        this.$el.remove('click', this.clickHandler)
+        this.$el.removeEventListener('click', this.clickHandler)
     }
 
 }
