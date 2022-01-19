@@ -1,7 +1,7 @@
-const getTemplate = () => {
+const getTemplate = (placeholder) => {
     return `
     <div class="select__input" data-type="input">
-                    <span>Text</span>
+                    <span>${placeholder}</span>
                     <i class="fa fa-chevron-down" data-type="arrow"></i>
                 </div>
                 <div class="select__dropdown">
@@ -29,6 +29,7 @@ export class Select {
     }
 
     #render() {
+        const {placeholder} = this.options
         this.$el.classList.add('select')
         this.$el.innerHTML = getTemplate()
     }
