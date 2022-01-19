@@ -45,8 +45,14 @@ export class Select {
         }
     }
 
-    
-    
+    get isOpen() {
+        return this.$el.classList.contains('open')
+    }
+
+    toggle() {
+
+    }
+
     open() {
         this.$el.classList.add('open')
     }
