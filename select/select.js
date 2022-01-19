@@ -22,6 +22,7 @@ const getTemplate = () => {
 export class Select {
     constructor(selector, options) {
         this.$el = document.querySelector(selector)
+        this.options = options
 
         this.#render()
         this.#setup()
