@@ -3,7 +3,7 @@ const getTemplate = (data = [], placeholder) => {
 
     const items = data.map(item => {
         return `
-        <ul class="select__item">${item.value}</ul>
+        <ul class="select__item" data-type="item" data-value="${item.id}">${item.value}</ul>
         `
     })
 
