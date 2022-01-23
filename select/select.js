@@ -80,6 +80,8 @@ export class Select {
         });
         this.$el.querySelector(`[data-id="${id}"]`).classList.add('selectedq')
         
+        this.options.onSelect ? this.options.onSelect(this.current) : null
+
         this.close()
     }
 
