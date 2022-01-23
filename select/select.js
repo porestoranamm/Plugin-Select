@@ -64,6 +64,8 @@ export class Select {
 
     select(id) {
         this.selectedId = id
+        this.$value.textContent = this.current.value
+        this.close()
     }
 
     toggle() {
