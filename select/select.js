@@ -9,7 +9,7 @@ const getTemplate = (data = [], placeholder) => {
 
     return `
     <div class="select__input" data-type="input">
-                    <span>${text}</span>
+                    <span data-type="value">${text}</span>
                     <i class="fa fa-chevron-down" data-type="arrow"></i>
                 </div>
                 <div class="select__dropdown">
@@ -40,6 +40,7 @@ export class Select {
         this.clickHandler = this.clickHandler.bind(this)
         this.$el.addEventListener('click', this.clickHandler)
         this.$arrow = this.$el.querySelector('[data-type="arrow"]')
+        this.$value = this.$el.querySelector('[data-type="value"]')
     }
 
     clickHandler(event) {
