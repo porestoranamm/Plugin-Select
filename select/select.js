@@ -2,11 +2,13 @@ const getTemplate = (data = [], placeholder, selectedId) => {
     let text = placeholder ?? 'Placeholder по умолчанию'
 
     const items = data.map(item => {
+        let cks = ''
         if (item.id === selectedId.Id) {
             text = item.value
+            cls = 'selected'
         }
         return `
-        <ul class="select__item" data-type="item" data-id="${item.id}">${item.value}</ul>
+        <ul class="select__item ${cls}" data-type="item" data-id="${item.id}">${item.value}</ul>
         `
     })
 
