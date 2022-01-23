@@ -24,6 +24,7 @@ export class Select {
     constructor(selector, options) {
         this.$el = document.querySelector(selector)
         this.options = options
+        this.selectedId = null
 
         this.#render()
         this.#setup()
@@ -48,12 +49,16 @@ export class Select {
             this.toggle()
         } else if (type === 'item') {
             const id = event.target.dataset.id
-            console.log('id', id) 
+            this.select(id) 
         }
     }
 
     get isOpen() {
         return this.$el.classList.contains('open')
+    }
+
+    select(id) {
+
     }
 
     toggle() {
