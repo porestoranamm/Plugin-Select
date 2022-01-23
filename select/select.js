@@ -1,7 +1,10 @@
-const getTemplate = (data = [], placeholder) => {
-    const text = placeholder ?? 'Placeholder по умолчанию'
+const getTemplate = (data = [], placeholder, selectedId) => {
+    let text = placeholder ?? 'Placeholder по умолчанию'
 
     const items = data.map(item => {
+        if (item.id === selectedId.Id) {
+            text = item.value
+        }
         return `
         <ul class="select__item" data-type="item" data-id="${item.id}">${item.value}</ul>
         `
@@ -24,7 +27,7 @@ export class Select {
     constructor(selector, options) {
         this.$el = document.querySelector(selector)
         this.options = options
-        this.selectedId = null
+        this.selectedId = options.selectedId
 
         this.#render()
         this.#setup()
