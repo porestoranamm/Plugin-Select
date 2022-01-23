@@ -65,6 +65,12 @@ export class Select {
     select(id) {
         this.selectedId = id
         this.$value.textContent = this.current.value
+        
+        this.$el.querySelectorAll('[data-type="item"]').array.forEach(el=> {
+            el.classList.remove('selected')
+        });
+        this.$el.querySelector(`[data-id="${id}"]`).classList.add('selectedq')
+        
         this.close()
     }
 
