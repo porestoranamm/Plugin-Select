@@ -57,8 +57,12 @@ export class Select {
         return this.$el.classList.contains('open')
     }
 
-    select(id) {
+    get current() {
+        return this.options.data.find(item => item.id === this.selectedId)
+    }
 
+    select(id) {
+        this.selectedId = id
     }
 
     toggle() {
