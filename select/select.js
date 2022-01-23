@@ -45,7 +45,10 @@ export class Select {
         const {type} = event.target.dataset 
 
         if (type === 'input') {
-
+            this.toggle()
+        } else if (type === 'item') {
+            const id = event.target.dataset.id
+            console.log('id') 
         }
     }
 
