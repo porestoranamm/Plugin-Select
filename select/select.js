@@ -3,7 +3,7 @@ const getTemplate = (data = [], placeholder) => {
 
     const items = data.map(item => {
         return `
-        <ul class="select__item" data-type="item" data-value="${item.id}">${item.value}</ul>
+        <ul class="select__item" data-type="item" data-id="${item.id}">${item.value}</ul>
         `
     })
 
@@ -47,7 +47,7 @@ export class Select {
         if (type === 'input') {
             this.toggle()
         } else if (type === 'item') {
-            const id = event.target.dataset.value
+            const id = event.target.dataset.id
             console.log('id', id) 
         }
     }
